@@ -19,3 +19,24 @@ genList(head, 10);
 printList(head);
 : 1->2->3->4->5->6->7->8->9->10
 ```
+
+###### Example
+
+Reverse a linked list
+
+```py
+from linkedlist import *
+
+head = Node(1)
+head.genList(10)
+head.printList(10)
+
+last = None
+current = head
+while current != None:
+    n = current.next
+    current.next = last
+    last = current
+    current = n
+last.printList()
+```
